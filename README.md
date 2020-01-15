@@ -5,4 +5,7 @@ This repository contains work completed during Spring 2020 in Dr. Murray's DIG46
 The *ice* folder contains in-class exercises. 
 
 ## About Me
-This should be replaced.
+Mekalin Paengwan
+https://www.linkedin.com/in/mekalin-paengwan-7b3209188/
+
+Hard-working Digital Media Major with a 3.8 GPA seeking to fill a position that aspires to combine usability with visual design. With my passion in UX/UI design and skills in communication and organization, I believe that I would be a strong addition to your company.
