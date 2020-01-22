@@ -14,3 +14,6 @@ Hard-working Digital Media Major with a 3.8 GPA seeking to fill a position that 
 1. Item 1 [Google](http://www.google.come)
 2. Item 2
 3. Item 3
+## Conflicts
+
+This section represents code on the server that isn't on the local repository.
