@@ -1,0 +1,20 @@
+1/22/2020 Exercise
+
+Instagram
+
+The "like" feature
+-The heart changes into a red heart when you like a picture or if you double tap
+and image, it shows a gaint white heart
+
+Changing the "heart image" to show that the picture has been liked
+
+
+Team members:
+Mekalin Paengwan	justmekalin
+Stephen Barrett		sgbarrett		
+Lauren Scheffler 	LaurenScheffler
+
+
+
+
+
