@@ -1,14 +1,14 @@
-// Import correct component
-let Card; // This creates a reference to the Card Class
+import "./index.css"
 
-function runOnLoad()
-{
-    // Create a container for us
-    element = document.createElement("div");
-    element.id = "container";
-    document.body.appendChild(element);
-    var newTask = new Card({content:"Sample value provided"});
-    element.appendChild(newTask.render());
+class Card {
+    constructor(props){
+        this.props = props;
+        this.element = document.createElement("div");
+        this.element.innerHTML = this.props.content;
+        this.element.className = "card";
+    }
+    render(){
+        return this.element;
+    }
 }
-
-window.addEventListener("DOMContentLoaded", runOnLoad);
+export default Card;
