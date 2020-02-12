@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+//function replaces square class
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
@@ -14,7 +15,9 @@ class Board extends React.Component {
   renderSquare(i) {
     return (
       <Square
+      //pass value to the square
         value={this.props.squares[i]}
+        //show value when onclick
         onClick={() => this.props.onClick(i)}
       />
     );
@@ -22,7 +25,8 @@ class Board extends React.Component {
 
   render() {
     return (
-      <div>
+      //className ="game" was removed here
+            <div> 
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
@@ -88,6 +92,7 @@ class Game extends React.Component {
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
+    //history of game-show pass moves
     const moves = history.map((step, move) => {
       const desc = move ?
         'Go to move #' + move :
@@ -126,6 +131,7 @@ class Game extends React.Component {
 
 ReactDOM.render(<Game />, document.getElementById("root"));
 
+//declaring a winner
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
