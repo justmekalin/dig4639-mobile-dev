@@ -9,13 +9,13 @@ function Sum (a, b) {
 function AddList (arr){
   let result = undefined;
   if(Array.isArray(arr) && arr.length > 0){
-    let result = 0;
-  for(var i = 0;i <arr.length; i++){
-    if(typeof arr[i] != "number"){
+    result = 0;
+  for(var elem of arr){
+    if(typeof elem != "number"){
       result = undefined;
-      break
+      break;
     }
-    result = result + arr[i];
+    result = result + elem;
   }
 }
 return result;

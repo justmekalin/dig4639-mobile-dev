@@ -7,10 +7,15 @@ describe("Addlist", () => {
     let numElm = 1000;
     let input = [];
     let result = 0;
-    expect(AddList(input)).toBe(result);
-    input = [15,5,8,-10];
-    result = 18;
-    expect(AddList(input)).toBe(result);
+    let elem = 0;
+    for(var j = 0; j < 10; j++) {
+      for(var i =0; i <numElm; i++) {
+        elem = Math.random()*1000;
+        result += elem;
+        input.push(elem)
+      }
+      expect(AddList(input)).toBe(result);
+    }
   })
   test('tests if a empty array returns undefined', () => {
     let input = [];
