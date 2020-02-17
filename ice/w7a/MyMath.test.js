@@ -19,7 +19,11 @@ describe("Addlist", () => {
   })
   test('tests if a empty array returns undefined', () => {
     let input = [];
-    expect(Sum(AddList(input))).toBeUndefined();
+    expect((AddList(input))).toBeUndefined();
+  })
+  test('Tests if undefined element returns undefined', () => {
+    let input = [undefined, 0,2,3];
+    expect((AddList(input))).toBeUndefined();
   })
 })
 
@@ -27,11 +31,11 @@ describe("Addlist", () => {
   test('Wheather undefined is returned or invalid type', () => {
     expect(Sum(1, 2)).toBe(3)
   })
-test('adds 1 + 2 to equal 3', () => {
-  expect(Sum(1, 2)).toBe(3)
+  test('adds 1 + 2 to equal 3', () => {
+    expect(Sum(1, 2)).toBe(3)
 })
-it('produces the sum of 10 + 20, which should be 30', () => {
-  expect(Sum(10, 20)).toBe(30)
+  it('produces the sum of 10 + 20, which should be 30', () => {
+    expect(Sum(10, 20)).toBe(30)
 })
 })
 
