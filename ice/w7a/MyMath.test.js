@@ -1,6 +1,24 @@
-import { Sum } from './MyMath.js'
+import { Sum, AddList } from './MyMath.js'
 
-describe("Sum", () => {
+//AddList
+describe("Addlist", () => {
+
+  test('add a list of numbers together', () => {
+    let numElm = 1000;
+    let input = [];
+    let result = 0;
+    expect(AddList(input)).toBe(result);
+    input = [15,5,8,-10];
+    result = 18;
+    expect(AddList(input)).toBe(result);
+  })
+  test('tests if a empty array returns undefined', () => {
+    let input = [];
+    expect(Sum(AddList(input))).toBeUndefined();
+  })
+})
+
+  describe("Sum", () => {
   test('Wheather undefined is returned or invalid type', () => {
     expect(Sum(1, 2)).toBe(3)
   })
