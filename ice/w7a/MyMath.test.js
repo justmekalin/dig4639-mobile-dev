@@ -24,9 +24,8 @@ describe("Addlist", () => {
   test('Tests if undefined element returns undefined', () => {
     let input = [undefined, 0,2,3];
     expect((AddList(input))).toBeUndefined();
-  })
-})
-
+  })   
+}) 
   describe("Sum", () => {
   test('Wheather undefined is returned or invalid type', () => {
     expect(Sum(1, 2)).toBe(3)
