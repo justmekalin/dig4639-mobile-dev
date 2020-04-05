@@ -1,0 +1,77 @@
+[
+    {
+      "question": "Which country has beaver as the national emblem?",
+      "possibleAnswers":
+      [
+        {"text":"Canada",
+        "correct":true },
+        {"text":"turkey",
+          "correct":false
+        },
+        {"text":"Peru",
+          "correct":false
+        },
+        {"text":"China",
+          "correct": false
+        }
+      ]
+    },
+    {
+        "question": "Which is the hottest planet?",
+        "possibleAnswers":
+        [
+          {"text":"Venus",
+          "correct":true },
+          {"text":"Saturn",
+            "correct":false
+          },
+          {"text":"Jupiter",
+            "correct":false
+          },
+          {"text":"The Sun",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "question": "True or false – The longest human hair was measured at over 5 meters long?",
+        "possibleAnswers":
+        [
+          {"text":"False",
+            "correct":false
+          },
+          {"text":"True",
+            "correct":true
+          }
+        ]
+      }, 
+      {
+        "question": "Which war caused the greatest loss of life for Americans?",
+        "possibleAnswers":
+        [
+          {"text":"WWI",
+          "correct":false },
+          {"text":"American Civil War",
+            "correct":true
+          },
+          {"text":"Vietnam",
+            "correct":false
+          },
+          {"text":"WWII",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "question": "ou would weigh more on Mars than on Earth?",
+        "possibleAnswers":
+        [
+          {"text":"True",
+            "correct":false
+          },
+          {"text":"False",
+            "correct": true
+          }
+        ]
+      }
+  ]
