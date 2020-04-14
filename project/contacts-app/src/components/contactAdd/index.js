@@ -1,70 +1,63 @@
-import React from 'react';
+import React from "react";
 
-const HEADERS = {
-  "Method": "GET",
-  "headers": {
-    "API": "paengwan",
-    "Content-Type": "application/json",
-    "Accept": "application/json"
-  }
+const HEADERS ={
+    "Method" : "GET",
+    "headers" : {
+      "API" : "paengwan",
+      "Content-Type" : "application/json",
+      "Accept": "application/json"
+    }
 }
 
 class ContactAdd extends React.Component {
+    constructor(props) {
+        super(props);
+    
+        this.conName = React.createRef();
+        this.conNumber = React.createRef();
 
-  constructor(props) {
-    super(props);
-
-    this.textInput = React.createRef();
-    this.textInput2 = React.createRef();
-
-    this.state = {
-      value: '',
-      value2: ''
+        this.state = {
+            value: "",
+            value2: "",
+        }
     }
-  }
 
-  newVal = () => {
-    let newHeaders = {
-      ...HEADERS,
-      "method": "POST",
-      body: JSON.stringify({
-        name: this.textInput.current.value,
-        number: this.textInput2.current.value
-      })
-    }
-    fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({ value: this.textInput.current.value })
-        this.setState({ value: this.textInput2.current.value })
-        console.log(data)
-      }
+    getValue = () => {
+        let newHeaders = {...HEADERS,
+            "method" : "POST",
+            body: JSON.stringify({
+              name: this.conName.current.value,
+              number:this.conNumber.current.value
+            })}
+
+        fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
+        .then(response => response.json())
+        .then(() => {
+            this.setState({value: this.conName.current.value})
+            this.setState({value: this.conNumber.current.value})
+        }
         , [])
-  }
+    }
 
-  handleSubmit = e => {
-    e.preventDefault();
-    this.newVal()
-  }
+    handleSubmit = e => {
+        e.preventDefault();
+        this.getValue()
+    }
 
-  render() {
-
-    return (
-      <div>
-        <h2>Add Contact</h2>
-        <form onSubmit={this.handleSubmit}>
-
-          <label htmlFor="name">Full Name</label><br />
-          <input type="text" ref={this.textInput} id="name" /><br />
-
-          <label htmlFor="name">phone Number</label><br />
-          <input type="text" ref={this.textInput2} id="number" /><br />
-
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    );
-  }
+    render(){
+        return(
+            <div className = "card"> <h2>Add Contact</h2>
+                <form onSubmit= {this.handleSubmit}>
+                    <label>Contact Name</label><br/>
+                    <input type="text" ref={this.conName} id ="name"/>
+                        <br/>
+                    <label>Contact Number</label><br/>
+                    <input type="text" ref={this.conNumber} id ="number"/>
+                        <br/>
+                    <button type= "submit">Add Contact</button>
+                </form>
+            </div>
+        )
+    }
 }
-
 export default ContactAdd;

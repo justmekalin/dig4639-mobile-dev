@@ -1,3 +1,4 @@
+  
 import React from 'react';
 
 const HEADERS = {
@@ -21,7 +22,7 @@ class ContactRemove extends React.Component {
     }
   }
 
-  delVal = () => {
+  deleteCon = () => {
     let newHeaders = {
       ...HEADERS,
       "method": "POST",
@@ -41,12 +42,12 @@ class ContactRemove extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.delVal()
+    this.deleteCon()
   }
 
   render() {
     return (
-      <div> <h2>Remove contact</h2>
+      <div class="card"> <h2>Remove Contact</h2>
 
         <form onSubmit={this.handleSubmit}>
 

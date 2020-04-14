@@ -10,6 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h1>Contacts App</h1>
         <ContactList />
         <br />
         <ContactAdd />
