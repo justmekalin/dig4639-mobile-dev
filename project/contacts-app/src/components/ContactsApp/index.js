@@ -14,6 +14,17 @@ class ContactsApp extends React.Component {
     this.getProfile();
     this.getContacts();
   }
+  
+  getProfile() {
+    window.fetch("http://plato.mrl.ai:8080/profile", {
+      headers: { API: "paengwan" }
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({ profile: data });
+        console.log(data)
+      });
+  }
 
   add = (event) => {
     event.preventDefault();
@@ -43,16 +54,6 @@ class ContactsApp extends React.Component {
       });
   }
 
-  getProfile() {
-    window.fetch("http://plato.mrl.ai:8080/profile", {
-      headers: { API: "paengwan" }
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({ profile: data });
-        console.log(data)
-      });
-  }
 
   remove = (index) => {
     fetch('http://plato.mrl.ai:8080/contacts/remove', {
