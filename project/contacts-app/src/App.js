@@ -1,24 +1,15 @@
   
 import React from 'react';
 import './App.css';
-import ContactList from './components/contactList';
-import ContactAdd from './components/contactAdd';
-import ContactProfile from './components/contactProfile';
-import ContactRemove from './components/contactRemove';
+import ContactsApp from './components/ContactsApp';
+
 
 class App extends React.Component {
   render() {
     return (
       <div>
         <h1>Contacts App</h1>
-        <ContactList />
-        <br />
-        <ContactAdd />
-        <br />
-        <ContactProfile />
-        <br />
-        <ContactRemove />
-        <br />
+        <ContactsApp />
       </div>
     );
   }
