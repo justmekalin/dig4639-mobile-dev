@@ -69,53 +69,47 @@ class ContactsApp extends React.Component {
 
   render() {
     return (
-      <div>
+      
         <div class="card">
             <div>
                 <h2>Profile</h2>
                  
                     <p>{this.state.profile.name}</p>
                     <p>{this.state.profile.count}</p>
-                  
-                
-        
+                  <hr/>
+                        
             </div>
             <br />
             <div>
-              <fieldset>
-                <h2>Add Contact</h2>
+           
+                <h2>Add Contacts</h2>
                 <form onSubmit={this.add}>
-                  <input ref="name" type='text' placeholder='Full Name' />
-                  <input ref="number" type='text' placeholder='Phone Number' />
+                    <label>Name: </label>
+                    <br/>
+                  <input ref="name" type='text' /> <br/>
+                  <label>Number: </label>
+                  <br/>
+                  <input ref="number" type='text' />
                   <br />
-                  <button type="submit">ADD</button>
+                  <button type="submit">Add Contacts</button>
                 </form>
-              </fieldset>
+    
             </div>
           
-
-          <div className="right">
-            <fieldset className="contacts">
-              <h2>Contacts</h2>
+            
+              <h2>Contact List</h2>
               {this.state.contacts.map((value, index) => {
                 return (
-                  <fieldset className="card">
+                  <fieldset className="border">
                     <h4>{value.name}</h4>
                     <p>{value.number} </p>
-                    <div className="buttondiv">
+                    
                       <button type="submit"
                         onClick={() => this.remove(index)}
-                        id={index}>REMOVE
-                                    </button>
-                    </div>
+                        id={index}>Remove</button>
                   </fieldset>);
               })
               }
-            </fieldset>
-          </div>
-        </div>
-        <br />
-        <br />
       </div>
 
 
